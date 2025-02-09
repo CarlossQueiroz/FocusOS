@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #FFFFFF;
+    --color-secondary: #141414;
+    --button-green: #38b94e;
+    --button-red: #ef2d29;
+    --button-blue: #046fb6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.button-header {
+    color: var(--color-secondary);
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-90%);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+main {
+    height: calc(100vh - 181px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+main h1 {
+    font-size: 72px;
+}
+
+.buttons-main {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.buttons-main button {
+    width: 150px;
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buttons-main button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#btn-one {
+    background-color: var(--button-green);
+}
+
+#btn-two {
+    background-color: var(--button-red);
+}
+
+#btn-tree {
+    background-color: var(--button-blue);
+}
+
+footer {
+    background-color: #141414;
+    color: var(--color-primary);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.description-footer {
+    text-align: justify;
+}
+
+.social-media {
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+footer ul li a i:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+/* Estiliza o fundo escuro do modal */
+.modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /*visibility: hidden;
+    /*Remover depois*/
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar */
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.textfield label {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.textfield input {
+    display: block;
+    width: 100%;
+    border: 2px solid #a5a4a456;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.error input {
+    border: 2px solid var(--button-red);
+}
+
+#pomodoroForm button {
+    color: var(--button-green);
+    background-color: var(--color-primary);
+    border: solid var(--button-green);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#pomodoroForm button:hover {
+    background-color: var(--button-green);
+    color: var(--color-primary);
+}
+
+@media only screen and (max-width:600px) {
+    .buttons-main {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-media {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
