@@ -19,14 +19,13 @@
 
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/logo.PNG" alt="Lodo FocusOS">
-        </div>
-        <button class="button-header tooltip" onclick="abrirModalBtn()">
+        <img class="logo" src="assets/logo.PNG" alt="Lodo FocusOS">
+        <a class="button-header tooltip" onclick="abrirModalBtn()">
             <i class="fa-solid fa-pen-to-square"></i>
             <span class="tooltip-text">Alterar tempo</span>
-        </button>
+        </a>
     </header>
+
     <main>
         <strong>CRONÔMETRO</strong>
         <h1 id="cronometro"></h1>
@@ -37,23 +36,28 @@
         </div>
     </main>
 
-
     <audio id="alarmSound" src="assets/alarm.mp3"></audio>
 
     <footer>
         <div class="description-footer">
             <h3>Carlos Queiroz</h3>
-            <p>Um desenvolvedor web focado em frontend que constrói o frontend de sites e aplicativos da web que leva ao
-                sucesso do produto geral</p>
+            <p>
+                Desenvolvedor frontend focado na construção de experiências digitais fluidas, combinando design
+                intuitivo com código eficiente e acessível.
+            </p>
         </div>
-        <div class="social-media">
-            <h3>Social</h3>
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
-            </ul>
-        </div>
+        <ul class="social-media">
+            <li>
+                <a href="https://www.linkedin.com/in/carlos-queiroz-backend" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/CarlossQueiroz" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
 
     <!-- Estrutura do Modal -->
